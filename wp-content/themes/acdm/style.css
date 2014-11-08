@@ -1,0 +1,168 @@
+/*   
+Theme Name: Au coeur du monde
+Description: Custom theme for aucoeurdumonde.org website.
+Author: Nicolas Girault
+Template: twentytwelve
+Version: 1.0.0
+*/
+@import url(../twentytwelve/style.css);
+
+.logoACDM {
+	position: absolute;
+	left: 10px;
+	top: 40px;
+	-ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+
+/*Comments*/
+.comments-area article.comment {
+	background-repeat: no-repeat;
+	float: left;
+	border-bottom: none;
+}
+/*Override parent theme to fit postit design*/
+.comments-area article header {
+	margin: 0;
+}
+.comments-area article header cite, .comments-area article header time {
+	margin-left: 0;
+}
+.comments-area article.acdm-comment-0 {
+	background-image: url(images/postit0.gif);
+	width: 231px;
+}
+.comments-area article.acdm-comment-1 {
+	background-image: url(images/postit1.gif);
+	width: 228px;
+}
+.comments-area article.acdm-comment-2 {
+	background-image: url(images/postit2.gif);
+	width: 224px;
+}
+.comments-area article.acdm-comment-3 {
+	background-image: url(images/postit3.gif);
+}
+.comments-area article.acdm-comment-4 {
+	background-image: url(images/postit4.gif);
+}
+.comments-area article.acdm-comment-5 {
+	background-image: url(images/postit5.gif);
+	width: 223px;
+}
+.comments-area article.acdm-comment-6 {
+	background-image: url(images/postit6.gif);
+	width: 245px;
+}
+.comments-area article.acdm-comment-7 {
+	background-image: url(images/postit7.gif);
+	width: 232px;
+}
+.comments-area article.acdm-comment-8 {
+	background-image: url(images/postit8.gif);
+	width: 239px;
+}
+
+
+.comments-area article .comment-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 12px; 
+}
+.comments-area article.acdm-comment-1 header,
+.comments-area article.acdm-comment-1 .comment-content {
+	-ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    transform: rotate(-2deg);
+}
+.comments-area article.acdm-comment-1 header {
+	padding-top: 6px;
+    padding-left: 8px;
+}
+.comments-area article.acdm-comment-1 .comment-content {
+    padding-left: 12px;
+    padding-right: 22px;
+    height: 138px;
+}
+
+.comments-area article.acdm-comment-2 header,
+.comments-area article.acdm-comment-2 .comment-content {
+	-ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+    transform: rotate(-3deg);
+}
+.comments-area article.acdm-comment-2 header {
+	padding-top: 11px;
+    padding-left: 8px;
+}
+.comments-area article.acdm-comment-2 .comment-content {
+    padding-left: 12px;
+    padding-right: 22px;
+    height: 138px;
+}
+
+.comments-area article.acdm-comment-5 header,
+.comments-area article.acdm-comment-5 .comment-content {
+	-ms-transform: rotate(-14deg); /* IE 9 */
+    -webkit-transform: rotate(-14deg); /* Chrome, Safari, Opera */
+    transform: rotate(-14deg);
+}
+.comments-area article.acdm-comment-5 header {
+	padding-top: 17px;
+    padding-left: 10px;
+}
+.comments-area article.acdm-comment-5 .comment-content {
+    padding-left: 32px;
+    padding-right: 22px;
+    height: 135px;
+}
+
+.comments-area article.acdm-comment-6 header,
+.comments-area article.acdm-comment-6 .comment-content {
+	-ms-transform: rotate(9deg); /* IE 9 */
+    -webkit-transform: rotate(9deg); /* Chrome, Safari, Opera */
+    transform: rotate(9deg);
+}
+.comments-area article.acdm-comment-6 header {
+	padding-top: 14px;
+    padding-left: 37px;
+}
+.comments-area article.acdm-comment-6 .comment-content {
+    padding-left: 21px;
+    padding-right: 22px;
+    height: 138px;
+}
+
+.comments-area article.acdm-comment-7 header,
+.comments-area article.acdm-comment-7 .comment-content {
+	-ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+}
+.comments-area article.acdm-comment-7 header {
+	padding-top: 15px;
+    padding-left: 10px;
+}
+.comments-area article.acdm-comment-7 .comment-content {
+    padding-left: 24px;
+    padding-right: 22px;
+    height: 138px;
+}
+
+.comments-area article.acdm-comment-0 header,
+.comments-area article.acdm-comment-0 .comment-content {
+	-ms-transform: rotate(6deg); /* IE 9 */
+    -webkit-transform: rotate(6deg); /* Chrome, Safari, Opera */
+    transform: rotate(6deg);
+}
+.comments-area article.acdm-comment-0 header {
+	padding-top: 15px;
+    padding-left: 26px;
+}
+.comments-area article.acdm-comment-0 .comment-content {
+    padding-left: 18px;
+    padding-right: 22px;
+    height: 138px;
+}
+
