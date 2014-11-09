@@ -140,30 +140,31 @@ function get_news($atts, $content = null){
 		$posts_per_page = '-1';
 	}
 	
-    $new_categories = get_categories(array(
-        'type'     => 'post',
-        'child_of' => get_cat_ID( 'News' )
-    ));
-    $news_cats = array();
-    foreach($new_categories as $cat){
-        $news_cats[] = intval($cat->cat_ID);
-    }
-    var_dump($news_cats);
-
-    $posts = query_posts(array(
-        'cat' => 38,
+    $news_args = array(
+        'suppress_filters' => true,
         'posts_per_page' => $posts_per_page,
+        'post_type' => 'news',
         'order' => 'DESC'
-    ));
-    
-    //Rendering
-    $html ="";
-    foreach($posts as $post) :
-        $html .= 
-            "<li>".
-                $post->post_title.
-            "</li>";
-    endforeach;
+    );
+                 
+    $cust_loop = new WP_Query($news_args);
+            
+    if ($cust_loop->have_posts()) :
+        //Rendering
+        $html ="";
+        foreach($cust_loop->posts as $post) :
+            $categories = get_the_category($post->ID);
+            $cats = array();
+            foreach($categories as $cat){
+                $cats[] = get_cat_name($cat->term_id);
+            }
+            $html .= 
+                "<li class='".implode(' ', $cats)."'>".
+                    $post->post_title.
+                "</li>";
+        endforeach;
+    endif;
+    wp_reset_query(); 
 				
     return $html;	             
 }
