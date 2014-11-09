@@ -21,6 +21,7 @@ Version: 1.0.0
 	background-repeat: no-repeat;
 	float: left;
 	border-bottom: none;
+	height: 245px;
 }
 /*Override parent theme to fit postit design*/
 .comments-area article header {
@@ -32,36 +33,42 @@ Version: 1.0.0
 .comments-area article.acdm-comment-0 {
 	background-image: url(images/postit0.gif);
 	width: 231px;
+	/*height: 235px;*/
 }
 .comments-area article.acdm-comment-1 {
 	background-image: url(images/postit1.gif);
 	width: 228px;
+	/*height: 231px;*/
 }
 .comments-area article.acdm-comment-2 {
 	background-image: url(images/postit2.gif);
 	width: 224px;
+	/*height: 212px;*/
 }
 .comments-area article.acdm-comment-3 {
 	background-image: url(images/postit3.gif);
+	width: 222px;
+	/*height: 222px;*/
 }
 .comments-area article.acdm-comment-4 {
 	background-image: url(images/postit4.gif);
+	width: 240px;
+	/*height: 245px;*/
 }
 .comments-area article.acdm-comment-5 {
 	background-image: url(images/postit5.gif);
 	width: 223px;
+	/*height: 229px;*/
 }
 .comments-area article.acdm-comment-6 {
 	background-image: url(images/postit6.gif);
 	width: 245px;
+	/*height: 236px;*/
 }
 .comments-area article.acdm-comment-7 {
 	background-image: url(images/postit7.gif);
 	width: 232px;
-}
-.comments-area article.acdm-comment-8 {
-	background-image: url(images/postit8.gif);
-	width: 239px;
+	/*height: 230px;*/
 }
 
 
@@ -70,6 +77,23 @@ Version: 1.0.0
     overflow-y: scroll;
     font-size: 12px; 
 }
+
+.comments-area article.acdm-comment-0 header,
+.comments-area article.acdm-comment-0 .comment-content {
+	-ms-transform: rotate(6deg); /* IE 9 */
+    -webkit-transform: rotate(6deg); /* Chrome, Safari, Opera */
+    transform: rotate(6deg);
+}
+.comments-area article.acdm-comment-0 header {
+	padding-top: 15px;
+    padding-left: 26px;
+}
+.comments-area article.acdm-comment-0 .comment-content {
+    padding-left: 18px;
+    padding-right: 22px;
+    height: 147px;/*ok*/
+}
+
 .comments-area article.acdm-comment-1 header,
 .comments-area article.acdm-comment-1 .comment-content {
 	-ms-transform: rotate(-2deg); /* IE 9 */
@@ -88,18 +112,51 @@ Version: 1.0.0
 
 .comments-area article.acdm-comment-2 header,
 .comments-area article.acdm-comment-2 .comment-content {
-	-ms-transform: rotate(-3deg); /* IE 9 */
-    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
-    transform: rotate(-3deg);
+	-ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
 }
 .comments-area article.acdm-comment-2 header {
 	padding-top: 11px;
     padding-left: 8px;
 }
 .comments-area article.acdm-comment-2 .comment-content {
-    padding-left: 12px;
+    padding-left: 15px;
     padding-right: 22px;
-    height: 138px;
+    height: 141px;/*ok*/
+}
+
+.comments-area article.acdm-comment-3 header,
+.comments-area article.acdm-comment-3 .comment-content {
+	-ms-transform: rotate(3deg); /* IE 9 */
+    -webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+    transform: rotate(3deg);
+}
+.comments-area article.acdm-comment-3 header {
+	padding-top: 6px;
+    padding-left: 16px;
+}
+.comments-area article.acdm-comment-3 .comment-content {
+    padding-left: 11px;
+    padding-right: 22px;
+    height: 155px;/*ok*/
+}
+
+.comments-area article.acdm-comment-4 header,
+.comments-area article.acdm-comment-4 .comment-content {
+	-ms-transform: rotate(-11deg); /* IE 9 */
+    -webkit-transform: rotate(-11deg); /* Chrome, Safari, Opera */
+    transform: rotate(-11deg);
+}
+.comments-area article.acdm-comment-4 header {
+	padding-top: 17px;
+    padding-left: 7px;
+    width: 186px;
+}
+.comments-area article.acdm-comment-4 .comment-content {
+    padding-left: 25px;
+    padding-right: 22px;
+    height: 146px;/*ok*/
 }
 
 .comments-area article.acdm-comment-5 header,
@@ -131,7 +188,8 @@ Version: 1.0.0
 .comments-area article.acdm-comment-6 .comment-content {
     padding-left: 21px;
     padding-right: 22px;
-    height: 138px;
+    height: 153px;
+    width: 190px;
 }
 
 .comments-area article.acdm-comment-7 header,
@@ -148,21 +206,6 @@ Version: 1.0.0
     padding-left: 24px;
     padding-right: 22px;
     height: 138px;
-}
-
-.comments-area article.acdm-comment-0 header,
-.comments-area article.acdm-comment-0 .comment-content {
-	-ms-transform: rotate(6deg); /* IE 9 */
-    -webkit-transform: rotate(6deg); /* Chrome, Safari, Opera */
-    transform: rotate(6deg);
-}
-.comments-area article.acdm-comment-0 header {
-	padding-top: 15px;
-    padding-left: 26px;
-}
-.comments-area article.acdm-comment-0 .comment-content {
-    padding-left: 18px;
-    padding-right: 22px;
-    height: 138px;
+    width: 181px;
 }
 
