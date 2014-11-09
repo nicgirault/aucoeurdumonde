@@ -126,44 +126,47 @@ class SP_News_Widget extends WP_Widget {
 
 
 
-function get_news( $atts, $content = null ){
-            // setup the query
-            extract(shortcode_atts(array(
-		"limit" => '',	
-		"category" => ''
-	), $atts));
-	// Define limit
+function get_news($atts, $content = null){
+    // setup the query
+    extract(shortcode_atts(
+        array("limit" => ''),
+        $atts)
+    );
+	
+    // Define limit
 	if( $limit ) { 
 		$posts_per_page = $limit; 
 	} else {
 		$posts_per_page = '-1';
 	}
-	if( $category ) { 
-		$cat = $category; 
-	} else {
-		$cat = '';
-	}
-	ob_start();
-            $news_args = array( 'suppress_filters' => true,
-                           'posts_per_page' => $posts_per_page,
-                           'post_type' => 'news',
-                           'order' => 'DESC',
-                           'cat'	=> $cat
-                         );
-                         
-			
-				$cust_loop = new WP_Query($news_args);
-            
-          
-     
-            if ($cust_loop->have_posts()) : while ($cust_loop->have_posts()) : $cust_loop->the_post();
-            				get_template_part( 'content');  
-           endwhile;
-            endif;
-             wp_reset_query(); 
+	
+    $new_categories = get_categories(array(
+        'type'     => 'post',
+        'child_of' => get_cat_ID( 'News' )
+    ));
+    $news_cats = array();
+    foreach($new_categories as $cat){
+        $news_cats[] = intval($cat->cat_ID);
+    }
+    var_dump($news_cats);
+
+    $posts = query_posts(array(
+        'cat' => 38,
+        'posts_per_page' => $posts_per_page,
+        'order' => 'DESC'
+    ));
+    
+    //Rendering
+    $html ="";
+    foreach($posts as $post) :
+        $html .= 
+            "<li>".
+                $post->post_title.
+            "</li>";
+    endforeach;
 				
-		return ob_get_clean();			             
-	}
+    return $html;	             
+}
 add_shortcode('sp_news','get_news');	
 
 
