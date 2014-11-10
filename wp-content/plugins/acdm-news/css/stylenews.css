@@ -1,15 +1,23 @@
-.News.Info {
-	list-style-image: url('../images/news.gif');
+.acdm-news li {
+	line-height: 40px;
+    padding-left: 50px;
+	vertical-align: middle;
+    background-repeat: no-repeat;
+    list-style: none;
 }
 
-.News.Photo {
-	list-style-image: url('../images/photo.gif');
+.acdm-news li.Info {
+	background-image: url('../images/news.gif');
 }
 
-.News.Article {
-	list-style-image: url('../images/article.gif');
+.acdm-news li.Photo {
+	background-image: url('../images/photo.gif');
 }
 
-.News.Religion {
-	list-style-image: url('../images/religieux.gif');
+.acdm-news li.Article {
+	background-image: url('../images/article.gif');
+}
+
+.acdm-news li.Religion {
+	background-image: url('../images/religieux.gif');
 }
