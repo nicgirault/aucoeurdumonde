@@ -1,9 +1,17 @@
 .acdm-news li {
-	line-height: 40px;
-    padding-left: 50px;
-	vertical-align: middle;
-    background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 15px !important;
+	min-height: 40px;
+
     list-style: none;
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.acdm-news .news-list-content {
+	height: 40px;
+	vertical-align: middle;
+	display: table-cell;
 }
 
 .acdm-news li.Info {

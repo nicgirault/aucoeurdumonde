@@ -60,3 +60,9 @@ function acdm_comment( $comment, $args, $depth ) {
 	endswitch; // end comment_type check
 }
 
+function acdm_css_scripts() {
+    wp_register_style( 'bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+    wp_enqueue_style('bootstrap', false, array(), null, false);
+}
+add_action( 'wp_enqueue_scripts', 'acdm_css_scripts' );
+

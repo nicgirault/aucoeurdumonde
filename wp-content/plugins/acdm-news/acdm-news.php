@@ -64,17 +64,17 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 function get_news($atts, $content = null){
     // get shortcode attributes
     extract(shortcode_atts(
-        array("limit" => ''),
+        array("limit" => '', "title" => ''),
         $atts)
     );
 	
     // Parsing shortcode attributes
-	if( $limit ) { 
+	if($limit){ 
 		$posts_per_page = $limit; 
 	} else {
 		$posts_per_page = '-1';
 	}
-	
+
     $query_args = array(
         'suppress_filters' => true,
         'posts_per_page' => $posts_per_page,
@@ -85,7 +85,10 @@ function get_news($atts, $content = null){
     $cust_loop = new WP_Query($query_args);
     
     //Rendering
-    $html ="<div class='acdm-news'>";    
+    $html ="<div class='acdm-news'>";
+    if($title){
+        $html .= "<h3>".$title."</h3>";
+    }    
     if ($cust_loop->have_posts()) :
         $html .= "<ul>";
         foreach($cust_loop->posts as $post) :
@@ -95,9 +98,9 @@ function get_news($atts, $content = null){
                 $cats[] = get_cat_name($cat->term_id);
             }
             $html .= 
-                "<li class='".implode(' ', $cats)."'>".
+                "<li class='".implode(' ', $cats)."'><span class='news-list-content'>".
                     $post->post_title.
-                "</li>";
+                "</span></li>";
         endforeach;
         $html .= "</ul>";
     endif;
@@ -109,6 +112,8 @@ function get_news($atts, $content = null){
 }
 add_shortcode('sp_news','get_news');	
 
-
-wp_register_style( 'cssnews', plugin_dir_url( __FILE__ ) . 'css/stylenews.css' );
-wp_enqueue_style( 'cssnews' );
+function acdm_news_css_scripts() {
+    wp_register_style( 'cssnews', plugin_dir_url( __FILE__ ) . 'css/stylenews.css' );
+    wp_enqueue_style('cssnews');
+}
+add_action( 'wp_enqueue_scripts', 'acdm_news_css_scripts' );
