@@ -19,6 +19,10 @@ Version: 1.0.0
 body {
 	background-image: url(images/wood-pattern.jpg);
 }
+#page {
+	background: none;
+	overflow: visible;/*to allow rotated menu not to be cut*/
+}
 .site {
 	padding: 0 !important;
 }
@@ -46,6 +50,71 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
+/*Menu principal*/
+.main-navigation {
+	margin-top: 0;
+}
+.site-header {
+	padding: 0;
+}
+ul.nav-menu>li>a {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	width: 148px;
+	height: 173px;
+	box-shadow: 3px 3px 5px 1px black;
+
+	padding-top: 132px;
+	text-align: center;
+	background-color: white;
+}
+.nav-menu a[title="menu-preparatifs"] {
+	background-image: url(images/menu-preparatifs.jpg);
+	-ms-transform: rotate(6deg); /* IE 9 */
+    -webkit-transform: rotate(6deg); /* Chrome, Safari, Opera */
+    transform: rotate(6deg);
+}
+.nav-menu a[title="menu-presentation"] {
+	background-image: url(images/menu-presentation.jpg);
+	-ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+.nav-menu a[title="menu-carnet"] {
+	background-image: url(images/menu-carnet.jpg);
+	-ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+    transform: rotate(-3deg);
+}
+.nav-menu a[title="menu-galerie"] {
+	background-image: url(images/menu-photo.jpg);
+	-ms-transform: rotate(8deg); /* IE 9 */
+    -webkit-transform: rotate(8deg); /* Chrome, Safari, Opera */
+    transform: rotate(8deg);
+}
+.nav-menu a[title="menu-info"] {
+	background-image: url(images/menu-info.jpg);
+	-ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+}
+.main-navigation ul.nav-menu {
+	border-top: none;
+	border-bottom: none;
+}
+ul.nav-menu li ul li a {
+	width: 160px;
+	background-color: rgba(30,30,30,0.8);
+	border-bottom: 1px solid #888;
+	color: #888;
+}
+ul.nav-menu li ul li a:hover {
+	background-color: rgba(30,30,30,0.95);
+	color: #CCC;
+}
+
 
 /*Comments*/
 .comments-area article.comment {
