@@ -1,51 +1,54 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Au coeur du monde`,
+    siteTitleAlt: `Au coeur du monde`,
+    siteHeadline: "Au coeur du monde",
+    siteUrl: "https://aucoeurdumonde.org",
+    siteDescription: `Le blog de voyage de deux amis pendant un an à la découverte des religions.`,
+    siteLanguage: `fr`,
+    siteImage: `/android-chrome-512x512.png`,
+    author: "Nicolas & Olivier",
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
       options: {
         navigation: [
           {
-            title: `Blog`,
+            title: `Présentation`,
+            slug: `/presentation`,
+          },
+          {
+            title: `Préparatifs`,
+            slug: `/preparatifs`,
+          },
+          {
+            title: `Carnet de route`,
             slug: `/blog`,
           },
           {
-            title: `About`,
-            slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            title: `Photos`,
+            slug: `/photos`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            title: `+ d'infos`,
+            slug: `/infos`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        externalLinks: [],
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Au coeur du monde`,
+        short_name: `Au coeur du monde`,
+        description: `Le blog de voyage de deux amis pendant un an à la découverte des religions.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
@@ -65,6 +68,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
   ],
-}
+};
