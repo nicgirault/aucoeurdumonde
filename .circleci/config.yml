@@ -1,0 +1,31 @@
+version: 2.1
+workflows:
+  workflow:
+    jobs:
+      - build-and-deploy:
+          filters:
+            branches:
+              only:
+                - v2
+
+jobs:
+  build-and-deploy:
+    docker:
+      - image: circleci/node:12
+
+    working_directory: ~/aucoeurdumonde
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Dependencies
+          command: yarn
+
+      - run:
+          name: Build app
+          command: yarn build
+
+      - deploy:
+          name: Deploy to S3
+          command: yarn deploy au-coeur-du-monde.fr
