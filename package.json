@@ -12,7 +12,8 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop --port 9000",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "aws-spa deploy --directory public au-coeur-du-monde.fr"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^2.3.4",
