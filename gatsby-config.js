@@ -10,7 +10,7 @@ module.exports = {
     siteUrl: "https://aucoeurdumonde.org",
     siteDescription: `Le blog de voyage de deux amis pendant un an à la découverte des religions.`,
     siteLanguage: `fr`,
-    siteImage: `/android-chrome-512x512.png`,
+    siteImage: `/logo.png`,
     author: "Nicolas & Olivier",
   },
   plugins: [
@@ -28,7 +28,7 @@ module.exports = {
           },
           {
             title: `Carnet de route`,
-            slug: `/blog`,
+            slug: `/carnet-de-route`,
           },
           {
             title: `Photos`,
@@ -55,13 +55,8 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
+            src: `/logo.png`,
+            sizes: `150x100`,
             type: `image/png`,
           },
         ],

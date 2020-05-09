@@ -4,3 +4,11 @@
   text-align: center;
   margin-top: -50px;
 }
+
+ol li {
+  list-style: decimal !important;
+}
+
+/* header {
+  margin-bottom: 0 !important;
+} */
