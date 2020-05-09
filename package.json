@@ -20,9 +20,12 @@
     "gatsby": "^2.21.21",
     "gatsby-plugin-manifest": "^2.4.2",
     "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sitemap": "^2.4.2",
+    "leaflet": "^1.6.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.7.0"
   },
   "devDependencies": {
     "aws-spa": "^3.0.2",
