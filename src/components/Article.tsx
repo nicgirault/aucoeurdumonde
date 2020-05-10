@@ -10,7 +10,7 @@ const PostItem: React.FC<ArticleProps> = ({ post, isLast }) => {
         to={post.slug}
         sx={{ "&:hover": { textDecoration: "none" } }}
       >
-        <Box sx={{ "&:hover": { backgroundColor: "muted" } }} pt={3} pb={3}>
+        <Box pt={3} pb={3}>
           <Flex
             key={post.slug}
             sx={{ flexDirection: ["column", "row", "row"] }}
