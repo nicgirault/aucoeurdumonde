@@ -15,7 +15,10 @@ const CarnetDeRoute: React.FC<CarnetDeRouteData> = ({ data }) => {
         {data.allPost.nodes
           .filter((post) =>
             post.tags.every(
-              ({ name }) => name !== "English Article" && name !== "Preparation"
+              ({ name }) =>
+                name !== "English Article" &&
+                name !== "Preparation" &&
+                name !== "galerie"
             )
           )
           .map((post) => (

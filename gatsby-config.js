@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             title: `Photos`,
-            slug: `/photos`,
+            slug: `/galeries`,
           },
           {
             title: `+ d'infos`,
