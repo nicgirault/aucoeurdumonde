@@ -15,7 +15,7 @@ const PostItem: React.FC<ArticleProps> = ({ post, isLast }) => {
             key={post.slug}
             sx={{ flexDirection: ["column", "row", "row"] }}
           >
-            <Box sx={{ flexShrink: 0 }} mr={2}>
+            <Box sx={{ flexShrink: 0, maxWidth: ["100%", 300, 300] }} mr={2}>
               {post.banner && (
                 <Image
                   src={post.banner.childImageSharp.resize.src}
@@ -25,7 +25,7 @@ const PostItem: React.FC<ArticleProps> = ({ post, isLast }) => {
             </Box>
             <Box sx={{ flex: "1 1 auto", color: `text` }}>
               <Flex sx={{ flexDirection: "column" }}>
-                <Box sx={{ fontSize: [1, 2, 3] }}>{post.title}</Box>
+                <Box sx={{ fontSize: 3 }}>{post.title}</Box>
                 <Box sx={{ fontSize: 1 }}>{post.description}</Box>
                 <Box>
                   <time>{post.date}</time>

@@ -12,7 +12,7 @@ const CarnetDeRoute: React.FC<{ limit: number }> = ({ limit }) => {
           description
           banner {
             childImageSharp {
-              resize(width: 300, height: 169, quality: 90) {
+              resize(width: 600, height: 338, quality: 90) {
                 src
               }
             }
