@@ -2,7 +2,7 @@ import React from "react";
 import { jsx, Link as TLink, Flex, Box, Image, Divider } from "theme-ui";
 import { Link } from "gatsby";
 
-const PostItem: React.FC<PostItemProps> = ({ post }) => {
+const PostItem: React.FC<ArticleProps> = ({ post }) => {
   return (
     <>
       <TLink
@@ -40,7 +40,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
   );
 };
 
-interface PostItemProps {
+interface ArticleProps {
   post: PostItemData;
 }
 export interface PostItemData {
