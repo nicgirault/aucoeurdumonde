@@ -26,21 +26,27 @@ const CarnetDeRoute: React.FC<{ limit: number }> = ({ limit }) => {
       }
     }
   `);
+
+  const posts = data.allPost.nodes
+    .filter((post) =>
+      post.tags.every(
+        ({ name }) =>
+          name !== "English Article" &&
+          name !== "Preparation" &&
+          name !== "galerie"
+      )
+    )
+    .filter((_, index) => index < limit);
+
   return (
     <>
-      {data.allPost.nodes
-        .filter((post) =>
-          post.tags.every(
-            ({ name }) =>
-              name !== "English Article" &&
-              name !== "Preparation" &&
-              name !== "galerie"
-          )
-        )
-        .filter((_, index) => index < limit)
-        .map((post) => (
-          <PostItem key={post.slug} post={post} />
-        ))}
+      {posts.map((post, index) => (
+        <PostItem
+          key={post.slug}
+          post={post}
+          isLast={index === posts.length - 1}
+        />
+      ))}
     </>
   );
 };

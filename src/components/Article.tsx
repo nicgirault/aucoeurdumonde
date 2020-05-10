@@ -2,7 +2,7 @@ import React from "react";
 import { jsx, Link as TLink, Flex, Box, Image, Divider } from "theme-ui";
 import { Link } from "gatsby";
 
-const PostItem: React.FC<ArticleProps> = ({ post }) => {
+const PostItem: React.FC<ArticleProps> = ({ post, isLast }) => {
   return (
     <>
       <TLink
@@ -35,13 +35,14 @@ const PostItem: React.FC<ArticleProps> = ({ post }) => {
           </Flex>
         </Box>
       </TLink>
-      <Divider sx={{ margin: 0 }} />
+      {!isLast && <Divider sx={{ margin: 0 }} />}
     </>
   );
 };
 
 interface ArticleProps {
   post: PostItemData;
+  isLast: boolean;
 }
 export interface PostItemData {
   slug: string;
