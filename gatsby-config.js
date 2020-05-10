@@ -51,7 +51,7 @@ module.exports = {
         description: `Le blog de voyage de deux amis pendant un an à la découverte des religions.`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#795548`,
         display: `standalone`,
         icons: [
           {
