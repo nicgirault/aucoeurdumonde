@@ -9,7 +9,12 @@ enum Color {
 }
 const TripOnMap = () => {
   return (
-    <Map center={center} zoom={2} style={{ height: "500px" }}>
+    <Map
+      center={center}
+      zoom={2}
+      style={{ height: "500px" }}
+      scrollWheelZoom={false}
+    >
       <TileLayer
         attribution='<a href="http://stamen.com">Map tiles</a> by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
         url="https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
