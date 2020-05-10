@@ -11,7 +11,10 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
         sx={{ "&:hover": { textDecoration: "none" } }}
       >
         <Box sx={{ "&:hover": { backgroundColor: "muted" } }} pt={3} pb={3}>
-          <Flex key={post.slug}>
+          <Flex
+            key={post.slug}
+            sx={{ flexDirection: ["column", "row", "row"] }}
+          >
             <Box sx={{ flexShrink: 0 }} mr={2}>
               {post.banner && (
                 <Image
