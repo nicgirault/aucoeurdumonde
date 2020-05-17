@@ -36,7 +36,7 @@ module.exports = {
           },
           {
             title: `+ d'infos`,
-            slug: `/infos`,
+            slug: `/plus-d-infos`,
           },
         ],
         externalLinks: [],
